@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat WebSocket</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+
+    <script src="app.js" defer></script>
+
+</head>
+<body>
+
+<div id="login-screen">
+    <h2>Rejoindre le chat</h2>
+    <input type="text" id="username-input" placeholder="Ton prénom..." maxlength="20"/>
+    <button onclick="connect()">Rejoindre</button>
+</div>
+
+<div id="chat-screen" class="hidden">
+
+    <div id="chat-header">
+        <span id="connected-user"></span>
+    </div>
+
+    <ul id="messages-list">
+    </ul>
+
+    <div id="message-form">
+        <input type="text" id="message-input" placeholder="Ton message..."/>
+        <button onclick="sendMessage()">Envoyer</button>
+    </div>
+
+</div>
+
+</body>
+</html>
